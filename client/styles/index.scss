@@ -4,3 +4,69 @@ html,
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
+.frontpage-layout {
+  display: flex;
+  margin: 10px;
+  background-color: #f0f8ff;
+  border: 1px solid #87cefa;
+  border-radius: 0.5rem;
+  padding: 1rem;
+
+  img {
+    width: 20rem;
+  }
+  
+  p {
+    padding: 2%;
+  }
+  
+}
+
+.project-grid {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1rem;
+  grid-auto-rows: minmax(150px, auto); // Ensures each card has a minimum height, keeping rows aligned
+
+  // Responsive grid layout with a fixed number of columns for each screen size
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .project-card {
+    background-color: #f0f8ff;
+    border: 1px solid #87cefa;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+    h2 {
+      font-size: 1.25rem;
+      color: #4682b4;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
+  }
+}
