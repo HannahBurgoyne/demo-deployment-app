@@ -1,4 +1,5 @@
 import { useProjects } from '../hooks/useProjects.ts'
+import Comments from './Comments.tsx'
 import Projects from './Projects.tsx'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           />
         </section>
         <Projects />
+        <Comments />
       </div>
     </>
   )
